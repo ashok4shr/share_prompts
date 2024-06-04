@@ -9,9 +9,9 @@ export const connectToDB = async () =>{
         console.log('MongoDB is already connected');
         return;
     }
-// "process.env.MONGODB_URI" remove the "" after adding .env file during deployment.
+// changed "process.env.MONGODB_URI" to the real url
     try {
-        await mongoose.connect("process.env.MONGODB_URI", {
+        await mongoose.connect("mongodb+srv://4ashokshi:5HtNOgewCDGBkXqY@promptopia.qx4efi0.mongodb.net/?retryWrites=true&w=majority&appName=promptopia", {
             dbName: "promptopia",
             useNewUrlParser: true,
             useUnifiedTopology: true,
