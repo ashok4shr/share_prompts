@@ -11,7 +11,7 @@ export const connectToDB = async () =>{
     }
 // changed "process.env.MONGODB_URI" to the real url
     try {
-        await mongoose.connect("mongodb+srv://4ashokshi:5HtNOgewCDGBkXqY@promptopia.qx4efi0.mongodb.net/?retryWrites=true&w=majority&appName=promptopia", {
+        await mongoose.connect(process.env.MONGODB_URI, {
             dbName: "promptopia",
             useNewUrlParser: true,
             useUnifiedTopology: true,
